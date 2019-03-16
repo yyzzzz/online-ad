@@ -1,6 +1,6 @@
 package com.yyzzzz.ad.domain;
 
-import com.yyzzzz.ad.constants.CommonStatus;
+import com.yyzzzz.ad.constants.CommonEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -46,7 +46,7 @@ public class AdUser {
     public AdUser(String username, String token) {
         this.username = username;
         this.token = token;
-        this.userStatus = CommonStatus.VALID.getStatus();
+        this.userStatus = CommonEnum.VALID.getStatus();
         this.createTime = new Date();
         this.updateTime = this.createTime;
     }

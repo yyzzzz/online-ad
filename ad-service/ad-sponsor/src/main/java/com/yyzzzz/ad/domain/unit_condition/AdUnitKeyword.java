@@ -1,12 +1,10 @@
 package com.yyzzzz.ad.domain.unit_condition;
 
-import com.yyzzzz.ad.constants.CommonStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
 
 /**
  * Created by yyzzzz on 2019/3/14.

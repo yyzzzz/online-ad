@@ -1,6 +1,6 @@
 package com.yyzzzz.ad.domain;
 
-import com.yyzzzz.ad.constants.CommonStatus;
+import com.yyzzzz.ad.constants.CommonEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -47,7 +47,7 @@ public class AdUnit {
     public AdUnit(Long planId, String unitName, Integer positionType, Long budget) {
         this.planId = planId;
         this.unitName = unitName;
-        this.unitStatus = CommonStatus.VALID.getStatus();
+        this.unitStatus = CommonEnum.VALID.getStatus();
         this.positionType = positionType;
         this.budget = budget;
         this.createTime = new Date();

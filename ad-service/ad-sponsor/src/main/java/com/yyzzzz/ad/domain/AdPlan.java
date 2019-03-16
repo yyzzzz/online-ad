@@ -1,6 +1,6 @@
 package com.yyzzzz.ad.domain;
 
-import com.yyzzzz.ad.constants.CommonStatus;
+import com.yyzzzz.ad.constants.CommonEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -47,7 +47,7 @@ public class AdPlan {
     public AdPlan(Long userId, String planName, Date startDate, Date endDate) {
         this.userId = userId;
         this.planName = planName;
-        this.planStatus = CommonStatus.VALID.getStatus();
+        this.planStatus = CommonEnum.VALID.getStatus();
         this.startDate = startDate;
         this.endDate = endDate;
         this.createTime = new Date();
