@@ -1,6 +1,7 @@
 package com.yyzzzz.ad.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.yyzzzz.ad.client.SponsorClient;
 import com.yyzzzz.ad.annotation.IgnoreResponseAdvice;
 import com.yyzzzz.ad.client.vo.AdPLan;
 import com.yyzzzz.ad.client.vo.AdPlanGetRequest;
@@ -23,6 +24,16 @@ public class SearchController {
 
     @Autowired
     private RestTemplate restTemplate;
+
+    @Autowired
+    private SponsorClient sponsorClient;
+
+    @IgnoreResponseAdvice
+    @PostMapping("/get")
+    public CommonResponse<List<AdPLan>> getAdPlans(@RequestBody AdPlanGetRequest request){
+        log.info("ad-search : get ad plans -> {}", JSON.toJSONString(request));
+        return sponsorClient.getAdPlans(request);
+    }
 
     @IgnoreResponseAdvice
     @PostMapping("/getAdPlansByRibbon")
